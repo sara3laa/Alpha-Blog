@@ -8,4 +8,6 @@ class User < ApplicationRecord
   validates :email, presence: true, length: {maximum: 105},
           uniqueness: {case_sensitive: false},
           format: {with: URI::MailTo::EMAIL_REGEXP}
+          has_secure_password validations: false
+
 end
