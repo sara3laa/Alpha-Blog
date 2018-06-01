@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       flash[:success] = 'welcome to your Blog'
       redirect_to users_path(user)
     else
-      flash.now[:danger] = 'yourlogin information are incorrect'
+      flash.now[:danger] = 'your login information are incorrect'
       render 'new'
     end
   end
